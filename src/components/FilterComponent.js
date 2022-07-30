@@ -52,7 +52,7 @@ export function SearchComponent({ handleSearch }) {
           <SearchIcon />
         </SearchIconWrapper>
         <StyledInputBase
-          placeholder='Search for a country…'
+          placeholder='Search for a country'
           inputProps={{ "aria-label": "search" }}
         />
       </Card>

@@ -26,11 +26,11 @@ Users should be able to:
 
 ### Screenshot
 
-(./assets/Screen Shot 2022-07-30 at 08.30.28.png)
+['./assets/Screen Shot 2022-07-30 at 08.30.28.png']
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: ['https://www.frontendmentor.io/solutions/rest-countries-app-with-color-theme-switcher-ZDf31Vhpx9']
 - Live Site URL: ['https://vercel.com/ruckythewebdesigner/rest-countries']
 
 ## My process
@@ -47,7 +47,7 @@ Users should be able to:
 
 ### What I learned
 
-i improved my skills using useQuery & useParams hooks
+i improved my skills using useQuery & useParams hooks, and MUI dark mode theme with switcher buttons.
 
 ## Author
 

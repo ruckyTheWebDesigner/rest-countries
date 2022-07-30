@@ -23,9 +23,10 @@ code {
   padding: 0.5rem 1rem;
 }
 
-.search_card {
-  width: 100%;
-  height: 100%;
+.css-1iz4iln {
+  padding: 0.5rem 0.7rem !important;
+  height: auto;
+  width: auto;
 }
 
 .search-input {
