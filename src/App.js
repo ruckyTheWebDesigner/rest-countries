@@ -54,10 +54,16 @@ function App() {
     }
   };
 
-  const modeTheme = createTheme(getDesignTokens(mode));
+  const theme = createTheme({
+    palette: {
+      mode: mode,
+    },
+  });
+
+  // const modeTheme = createTheme(getDesignTokens(mode));
 
   return (
-    <ThemeProvider theme={modeTheme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <Navbar toggleMode={toogleMode} mode={mode} />
       <Router>
