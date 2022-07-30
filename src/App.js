@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { ThemeProvider, createTheme, CssBaseline } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Navbar from "./components/Navbar";
@@ -59,8 +60,6 @@ function App() {
       mode: mode,
     },
   });
-
-  // const modeTheme = createTheme(getDesignTokens(mode));
 
   return (
     <ThemeProvider theme={theme}>
