@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
@@ -10,6 +10,11 @@ import Country from "./pages/Country";
 const getDesignTokens = (mode) => ({
   palette: {
     mode,
+    background: {
+      default: mode === "light" ? "hsl(0, 0%, 98%)" : "hsl(207, 26%, 17%)",
+      paper: mode === "light" ? "hsl(0, 0%, 98%)" : "hsl(207, 26%, 17%)",
+    },
+
     default: {
       main: mode === "light" ? grey[50] : grey[900],
       light: mode === "light" ? grey[200] : grey[900],
@@ -52,7 +57,7 @@ const getDesignTokens = (mode) => ({
 const localTheme = localStorage.getItem("theme");
 
 function App() {
-  const [mode, setmode] = useState(localTheme);
+  const [mode, setmode] = useState(localTheme || "light");
 
   const toogleMode = () => {
     if (mode === "light") {
