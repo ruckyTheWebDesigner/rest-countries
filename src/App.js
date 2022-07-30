@@ -39,19 +39,6 @@ const getDesignTokens = (mode) => ({
   },
 });
 
-const customTheme = createTheme({
-  palette: {
-    primary: {
-      main: "#4A16DA",
-      contrastText: "white",
-    },
-    secondary: {
-      main: "#FFC107",
-      contrastText: "white",
-    },
-  },
-});
-
 const localTheme = localStorage.getItem("theme");
 
 function App() {
@@ -68,14 +55,14 @@ function App() {
     }
   };
 
-  const theme = createTheme({
-    palette: {
-      mode: mode,
-    },
-  });
+  const customTheme = React.useMemo(
+    () => createTheme(getDesignTokens(mode)),
+    [mode]
+  );
 
   return (
-    <>
+    <ThemeProvider theme={customTheme}>
+      <CssBaseline />
       <Navbar toggleMode={toogleMode} mode={mode} />
       <Router>
         <Routes>
@@ -83,7 +70,7 @@ function App() {
           <Route path='/country/:countryname' exact element={<Country />} />
         </Routes>
       </Router>
-    </>
+    </ThemeProvider>
   );
 }
 
