@@ -6,8 +6,6 @@ import Navbar from "./components/Navbar";
 import { amber, blue, grey } from "@mui/material/colors";
 import Country from "./pages/Country";
 
-// custom palette theme
-
 const getDesignTokens = (mode) => ({
   palette: {
     mode,
@@ -39,8 +37,6 @@ const getDesignTokens = (mode) => ({
     },
   },
 });
-
-// get theme from localStorage
 
 const localTheme = localStorage.getItem("theme");
 
