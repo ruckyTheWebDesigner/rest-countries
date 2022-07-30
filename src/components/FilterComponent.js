@@ -52,6 +52,7 @@ export function SearchComponent({ handleSearch }) {
           <SearchIcon />
         </SearchIconWrapper>
         <StyledInputBase
+          className='search_input'
           placeholder='Search for a country'
           inputProps={{ "aria-label": "search" }}
         />

@@ -26,8 +26,11 @@ function Country() {
       ) : (
         <div className='country-section'>
           <Button className='backtohome_btn' color='inherit' variant='outlined'>
-            <BiArrowBack className='back-btn' />
-            <Link to='/'>Back</Link>
+            <Link to='/'>
+              {" "}
+              <BiArrowBack className='back-btn' />
+              Back
+            </Link>
           </Button>
           {result.map((country) => {
             return (

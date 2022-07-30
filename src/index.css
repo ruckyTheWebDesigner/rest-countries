@@ -92,7 +92,15 @@ span {
 }
 
 .back-btn {
-  margin-right: 0.4rem;
+  padding-right: 0.4rem;
+  padding-top: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.search_input {
+  padding-right: 1.4rem;
+  height: auto;
+  width: auto;
 }
 
 .countries-section {
