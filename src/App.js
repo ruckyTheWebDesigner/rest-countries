@@ -10,6 +10,16 @@ import Country from "./pages/Country";
 const getDesignTokens = (mode) => ({
   palette: {
     mode,
+    default: {
+      main: mode === "light" ? grey[50] : grey[900],
+      light: mode === "light" ? grey[200] : grey[900],
+      dark: mode === "light" ? grey[900] : grey[200],
+      contrastText: mode === "light" ? grey[900] : grey[50],
+      text: mode === "light" ? grey[900] : grey[50],
+      primary: mode === "light" ? blue[500] : amber[500],
+      secondary: mode === "light" ? blue[500] : amber[500],
+      paper: mode === "light" ? grey[50] : grey[900],
+    },
     primary: {
       main: mode === "light" ? blue[500] : blue[900],
       ...(mode === "dark" && {
